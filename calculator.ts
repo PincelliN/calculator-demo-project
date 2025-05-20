@@ -6,15 +6,15 @@ expected return
 duration
 */
 
-type dataInvesment = {
-    initialAmount: string;
-    annualContribution: string;
-    expectedReturn: string;
-    duration: string;
+type DataInvesment = {
+    initialAmount: number;
+    annualContribution: number;
+    expectedReturn: number;
+    duration: number;
 }
 
 
-function calculateInvesment(data:dataInvesment) { };
+function calculateInvesment(data:DataInvesment) { };
 
 function printResult(result) { };
 
