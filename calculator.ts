@@ -60,7 +60,22 @@ function calculateInvesment(data: DataInvesment): InvesmentResult[] | string {
     return annualResult;
 };
 
-function printResult(result) { };
+function printResult(result: InvesmentResult[] | string) {
+    if (typeof result === 'string') {
+        console.log(result);
+        return;
+    }
+
+    for (const yearEndResult of result) {
+        console.log(yearEndResult.years);
+        console.log(`TotalAmount: ${yearEndResult.totalAmount.toFixed(2)}`);
+        console.log(`TotalContributions: ${yearEndResult.totalContributions.toFixed(2)}`);
+        console.log(`TotalInterestEarned: ${yearEndResult.totalInterestEarned.toFixed(2)}`);
+        console.log('-----------------------');
+        
+    }
+    return;
+};
 
 const result = calculateInvesment(...);
 
